@@ -30,5 +30,9 @@ public class Ride {
 		this.name = name;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Ride [id=" + id + ", name=" + name + ", duration=" + duration + "]";
+	}
+
 }
