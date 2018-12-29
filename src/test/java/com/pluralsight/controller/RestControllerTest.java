@@ -50,8 +50,8 @@ public class RestControllerTest {
 		
 		System.out.println(ride);
 	}
-	@Test(timeout=3000)
 
+	@Test(timeout=3000)
 	public void testUpdateRide() {
 		RestTemplate restTemplate = new RestTemplate();
 		
@@ -62,5 +62,14 @@ public class RestControllerTest {
 		restTemplate.put("http://localhost:8080/ride_tracker/ride", ride);
 		
 		System.out.println(ride);
+	}
+
+	@Test(timeout=3000)
+	public void testBatchUpdate() {
+		RestTemplate restTemplate = new RestTemplate();
+		
+		restTemplate.getForObject(
+				"http://localhost:8080/ride_tracker/batch", Object.class);
+		
 	}
 }
