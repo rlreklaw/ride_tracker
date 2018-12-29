@@ -9,3 +9,5 @@ For batch update demo we added a `ride_date` column to the table
 	`alter table ride add ride_date datetime after duration;`
 	
 `batchUpdate()` works for both `insert` and `update` statements.
+
+also use the `jdbcTemplate.update()` method to run `delete` SQL statements
